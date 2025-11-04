@@ -15,6 +15,7 @@ using namespace std;
 //prototypes
  
 void displayRun(int values[], int size);
+bool hasRun(int values[], int size);
 
 int main(void) {
     const int SIZE = 20;
@@ -24,6 +25,7 @@ int main(void) {
         values[i] = rand() % 6 + 1;
     }
     displayRun(values, SIZE);
+    //if (hasRun(values, SIZE) == true) cout << "***";
         
 
    
@@ -53,4 +55,13 @@ void displayRun(int values[], int size) {
     return;
 }
 
+bool hasRun(int values[], int size) {
+    for (int i = 0; i < size; i++) {
+        if (values[i] == values[i + 1]) {
+           
+            return true;
+        }
+    }
+    return false;
+}
 
